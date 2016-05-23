@@ -7,7 +7,6 @@ using System.Web;
 using System.Windows;
 using Newtonsoft.Json.Linq;
 using Sample;
-using SA.DigitalBanking.ApiClient;
 using Thinktecture.IdentityModel.Client;
 using Thinktecture.Samples;
 using WpfClient;
