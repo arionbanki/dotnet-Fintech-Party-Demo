@@ -155,8 +155,10 @@ namespace SA.DigitalBanking.WpfGithubDemo
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ocpApimSubscriptionKey);
             client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
 
-            //var uri = "https://arionapi-sandbox.azure-api.net/accounts/v1/getall?" + queryString;
-            var uri = "https://arionapi-sandbox.azure-api.net/accounts/v1/getall";
+            // Get a single account:
+            //var uri = "https://arionapi-sandbox.azure-api.net/accounts/v1/accounts/" + "XXXXXXXXXXXXX";
+            // Get all accounts:
+            var uri = "https://arionapi-sandbox.azure-api.net/accounts/v1/accounts";
 
             var response = await client.GetAsync(uri);
 
