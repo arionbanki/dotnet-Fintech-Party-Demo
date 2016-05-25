@@ -20,7 +20,7 @@ public static string ClientId => "[ClientId]";
 public static string ClientSecret => "[Secret]";
         
 // The registered redirect url for the OAuth2 client:<br>
-public static string ClientRedirectUrl => "[RedirectUrl";
+public static string ClientRedirectUrl => "[RedirectUrl]";
 
 05 - Taka frá notanda til að geta auðkennt sig inn, það er gert á eftirfarandi slóð:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/NewUser?clientId=[ClientId]
