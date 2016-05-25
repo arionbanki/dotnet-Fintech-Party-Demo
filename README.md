@@ -11,8 +11,8 @@ public static string OcpApimSubscriptionKey => "[YourAzureDeveloperKeyGoesHere]"
 https://arionapi-identityserver3-sandbox.azurewebsites.net/clientregistration?clientId=[ClientId]&redirectpath=[ClientRedirectUrl]&flowType=code
 
 <br>
-*[ClientId] er nafnið sem menn vilja gefa sínum OAuth2 biðlara. 
-*[ClientRedirectUrl] er slóðin sem menn vilja vera beint inn á eftir innskráningu með sínum biðlara
+*[ClientId] er nafnið sem menn vilja gefa sínum OAuth2 biðlara.<br> 
+*[ClientRedirectUrl] er slóðin sem menn vilja vera beint inn á eftir innskráningu með sínum biðlara<br><br>
 
 - Taka ClientID, ClientSecret og ClientRedirectUrl að ofan ( úr 03 ) og nota í lið 04 að neðan
 
