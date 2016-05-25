@@ -25,4 +25,4 @@ public static string ClientRedirectUrl => "[RedirectUrl]";
 05 - Taka frá notanda til að geta auðkennt sig inn, það er gert á eftirfarandi slóð:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/NewUser?clientId=[ClientId]
 
-- Muna username/passowrd sem menn fengu úthlutað til innskráningar, og nota þegar menn skrá sig inn :-)
+- Muna eða skrifa niður notandanafn/lykilorð sem menn fengu úthlutað til innskráningar, og nota þegar menn skrá sig inn :-)
