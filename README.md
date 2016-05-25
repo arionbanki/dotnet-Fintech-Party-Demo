@@ -3,7 +3,7 @@ Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 01 - Til að geta sótt gögn frá Fintech þjónustunum þarf að setja inn developer key. Ef þú hefur ekki fengið slíkan þarftu að skrá þig á https://arionapi-sandbox.portal.azure-api.net
 
-02 - Lykillinn þarf að fara inn í Constants.cs skránna:
+02 - Lykillinn þarf að fara inn í Constants.cs skránna:<br>
 // Azure Developer key - needed to contact the webapi's in Azure
 public static string OcpApimSubscriptionKey => "[YourAzureDeveloperKeyGoesHere]";
 
