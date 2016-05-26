@@ -224,7 +224,8 @@ namespace SA.DigitalBanking.WpfGithubDemo
             // Get all names starting with 'Gunnar':
             var uri = "https://arionapi-sandbox.azure-api.net/nationalregistry/v1/nationalRegistryParties/" + "Gunnar";
 
-            //var uri = "https://arionapi-sandbox.azure-api.net/nationalregistry/v1/nationalRegistryParty/" + "1112805179";
+            // Get data from specific kennitala:
+            //var uri = "https://arionapi-sandbox.azure-api.net/nationalregistry/v1/nationalRegistryParty/" + "111280XXXX";
 
             var response = await client.GetAsync(uri);
 
@@ -244,35 +245,11 @@ namespace SA.DigitalBanking.WpfGithubDemo
                     {
                         if (prop.Name == "Kennitala" || prop.Name == "FullName" || prop.Name == "Home") 
                         {
-                            string tempValue = prop.Value.ToString(); // This is not allowed )
+                            string tempValue = prop.Value.ToString();
                             Textbox1.AppendText(tempValue + " - ");
                         }
                     }
                 }
-
-                /*foreach (var item in jsonArray)
-                {                    
-                    var ob = new JToken(item);
-                    foreach (var t in ob.Values())
-                    {
-                        JObject oo = new JObject(t);
-                        foreach (var x in oo)
-                        {
-                            Textbox1.AppendText(x.Key +" : " + x.Value + "\n");
-                        }
-                    }
-                }*/
-
-                /*
-                    foreach (var item in jsonArray) {
-                    JsonObject ob = new JsonObject(item);
-                    foreach (var t in ob.Values) {
-                        JsonObject oo = new JsonObject(t);
-                        foreach (var x in oo) {
-                            textBox1.AppendText(x.Key + “ : ” + x.Value + “\n”);
-                        }
-                    }
-                }  */
             }
             else
             {
