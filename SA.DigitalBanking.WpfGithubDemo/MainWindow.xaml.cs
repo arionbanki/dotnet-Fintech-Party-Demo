@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web;
 using System.Windows;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Sample;
 using Thinktecture.IdentityModel.Client;
@@ -176,6 +178,106 @@ namespace SA.DigitalBanking.WpfGithubDemo
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Clipboard.SetText(this.textBoxAuthHeader.Text);
+        }
+
+        private async void CallCurrencyRateServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            string ocpApimSubscriptionKey = Constants.OcpApimSubscriptionKey;
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ocpApimSubscriptionKey);
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+
+            // Get a single currency rate:
+            var uri = "https://arionapi-sandbox.azure-api.net/currency/v1/currencyRates/" + "CentralBankRate";
+            // Get all currency rates:
+            //var uri = "https://arionapi-sandbox.azure-api.net/currency/v1/currencyRates";
+
+            var response = await client.GetAsync(uri);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                Textbox1.Text = JObject.Parse(json).ToString();
+            }
+            else
+            {
+                MessageBox.Show(response.StatusCode.ToString());
+            }
+        }
+
+        private async void CallNationalRegistryServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            string ocpApimSubscriptionKey = Constants.OcpApimSubscriptionKey;
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ocpApimSubscriptionKey);
+            // Open service, not protected by AuthorizationServer:
+            //client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+
+            // Get all names starting with 'Gunnar':
+            var uri = "https://arionapi-sandbox.azure-api.net/nationalregistry/v1/nationalRegistryParties/" + "Gunnar";
+
+            //var uri = "https://arionapi-sandbox.azure-api.net/nationalregistry/v1/nationalRegistryParty/" + "1112805179";
+
+            var response = await client.GetAsync(uri);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+
+                //var test = JObject.Parse(json);
+                // We're getting array back, let's use JArray.Parse:
+                var jsonArray = JArray.Parse(json);
+
+                //JArray jarr = JArray.Parse(result);
+                Textbox1.Text = string.Empty;
+                foreach (JObject content in jsonArray.Children<JObject>())
+                {
+                    foreach (JProperty prop in content.Properties())
+                    {
+                        if (prop.Name == "Kennitala" || prop.Name == "FullName" || prop.Name == "Home") 
+                        {
+                            string tempValue = prop.Value.ToString(); // This is not allowed )
+                            Textbox1.AppendText(tempValue + " - ");
+                        }
+                    }
+                }
+
+                /*foreach (var item in jsonArray)
+                {                    
+                    var ob = new JToken(item);
+                    foreach (var t in ob.Values())
+                    {
+                        JObject oo = new JObject(t);
+                        foreach (var x in oo)
+                        {
+                            Textbox1.AppendText(x.Key +" : " + x.Value + "\n");
+                        }
+                    }
+                }*/
+
+                /*
+                    foreach (var item in jsonArray) {
+                    JsonObject ob = new JsonObject(item);
+                    foreach (var t in ob.Values) {
+                        JsonObject oo = new JsonObject(t);
+                        foreach (var x in oo) {
+                            textBox1.AppendText(x.Key + “ : ” + x.Value + “\n”);
+                        }
+                    }
+                }  */
+            }
+            else
+            {
+                MessageBox.Show(response.StatusCode.ToString());
+            }
         }
     }
 }
