@@ -11,13 +11,13 @@ public static string OcpApimSubscriptionKey => "[YourAzureDeveloperKeyGoesHere]"
 https://arionapi-sandbox.portal.azure-api.net/docs/services/574d5a9cdbc60f015c0a5974/operations/574d5a9ddbc60f0fc8631c34
 
 <br>
-*[clientId] er nafnið sem menn vilja gefa sínum OAuth2 biðlara.<br> 
-*[redirectpath] er slóðin sem menn vilja vera beint inn á eftir innskráningu með sínum biðlara<br>
-*[flowType] annað hvort "codeflow" eða "implicit" - í flestum tilfellum er þetta "codeflow"<br><br>
+*<b>[clientId]</b> er nafnið sem menn vilja gefa sínum OAuth2 biðlara.<br> 
+*<b>[redirectpath]</b> er slóðin sem menn vilja vera beint inn á eftir innskráningu með sínum biðlara<br>
+*<b>[flowType]</b> annað hvort "codeflow" eða "implicit" - í flestum tilfellum er þetta "codeflow"<br><br>
 
 - Eftir að búið er að búa til OAuth2 client, skal taka <b>clientId</b>, <b>redirectpath</b> og <b>clientSecret</b> sem maður fékk uppgefið eftir að hafa búið til clientinn að ofan ( úr 03 ) og nota í lið 04 að neðan:
 
-04 - Setja inn ClientID, ClientSecret og ClientRedirectUrl í Constants.cs skránna:<br>
+04 - Setja inn <b>ClientID</b>, <b>ClientSecret</b> og <b>ClientRedirectUrl</b> í Constants.cs skránna:<br>
 // The registered id for the OAuth2 client:<br>
 public static string ClientId => "[ClientId]";
 
@@ -31,5 +31,5 @@ public static string ClientRedirectUrl => "[RedirectUrl]";
 https://arionapi-sandbox.portal.azure-api.net/docs/services/574d5a9cdbc60f015c0a5974/operations/574d5a9ddbc60f0fc8631c35
 
 <br>
-*[clientId] er nafnið sem menn völdu sér á sinn OAuth2 biðlara í lið 03 að ofan.<br>
+*<b>[clientId]</b> er nafnið sem menn völdu sér á sinn OAuth2 biðlara í lið 03 að ofan.<br>
 - Muna eða skrifa niður notandanafn/lykilorð sem menn fengu úthlutað til innskráningar, og nota þegar menn skrá sig inn :-)
