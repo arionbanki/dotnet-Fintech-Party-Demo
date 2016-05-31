@@ -1,11 +1,7 @@
 # DotNet sýnidæmi fyrir Fintech partý Arion banka hf. í júní 2016 
 Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
-01 - Til að geta sótt gögn frá Fintech þjónustunum þarf að setja inn developer key. Ef þú hefur ekki fengið slíkan þarftu að skrá þig á https://arionapi-sandbox.portal.azure-api.net
-
-02 - Lykillinn þarf að fara inn í Constants.cs skránna:<br>
-// Azure Developer key - needed to contact the webapi's in Azure<br>
-public static string OcpApimSubscriptionKey => "[YourAzureDeveloperKeyGoesHere]";
+01 - Til að geta sótt gögn frá Fintech þjónustunum þarf að setja inn developer key. Ef þú hefur ekki fengið slíkan þarftu að skrá þig á https://arionapi-sandbox.portal.azure-api.net<br>
 
 03 - Sækja um OAuth2 client með því að fara inn á Management Api og velja búa til nýjan client:<br>
 https://arionapi-sandbox.portal.azure-api.net/docs/services/574d5a9cdbc60f015c0a5974/operations/574d5a9ddbc60f0fc8631c34
@@ -17,7 +13,11 @@ https://arionapi-sandbox.portal.azure-api.net/docs/services/574d5a9cdbc60f015c0a
 
 - Eftir að búið er að búa til OAuth2 client, skal taka <b>clientId</b>, <b>redirectpath</b> og <b>clientSecret</b> sem maður fékk uppgefið eftir að hafa búið til clientinn að ofan ( úr 03 ) og nota í lið 04 að neðan:
 
-04 - Setja inn <b>ClientID</b>, <b>ClientSecret</b> og <b>ClientRedirectUrl</b> í Constants.cs skránna:<br>
+04 - Setja inn <b><developerKey></b> (úr lið 01 að ofan), <b>ClientID</b>, <b>ClientSecret</b> og <b>ClientRedirectUrl</b> (allt þrennt úr lið 03 að ofan) í Constants.cs skránna:<br>
+
+// Azure Developer key - needed to contact the webapi's in Azure<br>
+public static string OcpApimSubscriptionKey => "[YourAzureDeveloperKeyGoesHere]";<br>
+
 // The registered id for the OAuth2 client:<br>
 public static string ClientId => "[ClientId]";
 
