@@ -8,14 +8,6 @@ ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javacsript )
 Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
 
-ATH. Implicit client'ar þurfa EKKI að nota þennan endapunkt, en code clients ( t.d. java/C#/java/iOS/Android ) nota hann:<br>
-------------------------------------------------------------------------------------------------------------------------------
-Token endpoint - sendir authorization-code inn sem fékkst að ofan, til að fá access-token til baka:<br>
-https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
-
-notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
-<br>
-
 ath. til að gera implicit flow ( t.d. fyrir Python, Node.js og Javascript! ):
 <br>
 
@@ -35,6 +27,15 @@ https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?res
 Dæmi um harðkóðaðan access token sem notendur geta notað, til að einfalda málin:<br>
 ------------------------------------------------------------------------<br>
 "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsImtpZCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSJ9.eyJjbGllbnRfaWQiOiJFaWtpVGVzdENsaWVudCIsInNjb3BlIjoiZmluYW5jaWFsIiwic3ViIjoiMjExMjU3MjAyOSIsImFtciI6InBhc3N3b3JkIiwiYXV0aF90aW1lIjoxNDY0OTYxNTYyLCJpZHAiOiJpZHNydiIsImlzcyI6Imh0dHBzOi8vYXJpb25hcGktaWRlbnRpdHlzZXJ2ZXIzLXNhbmRib3guYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwczovL2FyaW9uYXBpLWlkZW50aXR5c2VydmVyMy1zYW5kYm94LmF6dXJld2Vic2l0ZXMubmV0L3Jlc291cmNlcyIsImV4cCI6MTQ2NTMyMTU2NiwibmJmIjoxNDY0OTYxNTY2fQ.gjgfL0_Jah0sGGswSu0-_K2ibLF8QPqzgyn0j4azOS2S7Wxg_bojwwqokfVkgPLlta1DnW4xuK0vWrdJBTmWRf6jFl8iEU5je43ppJ5i5kpJWgxFnC3H9JsYhCwbbsqbGYMMKoyBd3Xo7KNmknXBnJN62IlFjVrg_Fcnqut-79uSvS6X_Jlm509G21N1GnUDMAFLCxh_utUnr6Yp7G1y7gvep4VN5L--aMpSLDbQMOYfaRNcgeSjGNASG5mC1tB0TBGqNeUdeekkUYkQxMuaxjkO2rzPkMq1YPvQGgbp29LCsEe3TaasiidrFMaK2tPJ-7MRP-D5b6BymZPXJbcZrw"       
+
+
+ATH. Implicit client'ar þurfa EKKI að nota þennan endapunkt, en code clients ( t.d. java/C#/java/iOS/Android ) nota hann:<br>
+------------------------------------------------------------------------------------------------------------------------------
+Token endpoint - sendir authorization-code inn sem fékkst að ofan, til að fá access-token til baka:<br>
+https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
+
+notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
+<br>
 
 <br>--------------------------------------------------------------------------------------------------<br>
  
