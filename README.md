@@ -1,8 +1,8 @@
 # DotNet sýnidæmi fyrir Fintech partý Arion banka hf. í júní 2016 
 Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
-Nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta:<br>
-------------------------------------------------------------------------<br>
+Fyrzt nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta:<br>
+------------------------------------------------------------------------------<br>
 ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
 ----------------------------------------------------------------------------------------------
 Authorize endpoint - til að fá authorization-code til baka:<br>
