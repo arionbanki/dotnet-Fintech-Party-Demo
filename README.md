@@ -3,18 +3,30 @@ Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 Nokkrir punktar:
 ----------------
+ATH: bæði codeclients og implicitclient þurfa þennan endapunkt til að hefja innskráningu:<br>
+-----------------------------------------------------------------
 Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
 
+ATH. Implicit client'ar þurfa EKKI að nota þennan endapunkt:<br>
+------------------------------------------------------------
 Token endpoint - sendir authorization-code inn sem fékkst að ofan, til að fá access-token til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
 
 notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
+<br>
 
 ath. til að gera implicit flow ( t.d. fyrir javascript eða python! ):
+<br>
 
 responsetype: "token" fyrir implicit client'a og redirect_uri sett svona:
 redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback
+<br>
+
+Dæmi um hvernig implicit client ( t.d. Javascript eða Python ) myndi kalla til að fá tóka:
+----------------------------------------------------------------------------
+https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=XXXXXXXXXX&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&state=aae016ca-1c17-42bc-99d2-122c8470b0d9&scope=financial
+<br>
 
 Dæmi um access token sem notendur geta notað, til að einfalda málin:<br>
 ------------------------------------------------------------------------<br>
