@@ -19,7 +19,7 @@ Dæmi um hvernig implicit client ( t.d. Javascript eða Python ) myndi kalla til
 ----------------------------------------------------------------------------
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=XXXXXXXXXX&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&state=aae016ca-1c17-42bc-99d2-122c8470b0d9&scope=financial
 <br>
-annað dæmi ( athugið að sum OAuth2 helper library url-encoda sjálf fyrir mann, önnur ekki )
+annað dæmi ( athugið að sum OAuth2 helper library url-encoda sjálf fyrir mann, önnur ekki - redirectUri'ið þarf að vera url-encodað )
 <br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=FintechAzureApiManagement&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&state=aae016ca-1c17-42bc-99d2-122c8470b0d9&scope=financial
 <br>
