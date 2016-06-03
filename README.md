@@ -3,16 +3,16 @@ Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 Nokkrir punktar:
 ----------------
-Authorize endpoint - til að fá authorization-code til baka:
+Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
 
-Token endpoint - sendir authorization-code inn sem fékkst að ofan, til að fá access-token til baka:
+Token endpoint - sendir authorization-code inn sem fékkst að ofan, til að fá access-token til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
 
-notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna: https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
---------------------------------------------------------------------------------------------------
+notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
+--------------------------------------------------------------------------------------------------<br>
  
-Step-by-step leiðbeiningar fyrir  sýnidæmi:
+Step-by-step leiðbeiningar fyrir  sýnidæmi:<br>
 
 01 - Til að geta sótt gögn frá Fintech þjónustunum þarf að setja inn developer key. Ef þú hefur ekki fengið slíkan þarftu að skrá þig á https://arionapi-sandbox.portal.azure-api.net<br>
 
