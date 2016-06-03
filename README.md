@@ -3,7 +3,7 @@ Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 Nokkrir punktar:
 ----------------
-ATH: bæði codeclients og implicitclient ( t.d. Python og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
+ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
 ----------------------------------------------------------------------------------------------
 Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
@@ -16,7 +16,7 @@ https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
 notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
 <br>
 
-ath. til að gera implicit flow ( t.d. fyrir Python og Javascript! ):
+ath. til að gera implicit flow ( t.d. fyrir Python, Node.js og Javascript! ):
 <br>
 
 responsetype: "token" fyrir implicit client'a og redirect_uri sett svona:
