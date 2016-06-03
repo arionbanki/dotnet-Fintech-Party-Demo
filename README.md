@@ -16,7 +16,7 @@ https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
 notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
 <br>
 
-ath. til að gera implicit flow ( t.d. fyrir javascript eða python! ):
+ath. til að gera implicit flow ( t.d. fyrir Python og Javascript! ):
 <br>
 
 responsetype: "token" fyrir implicit client'a og redirect_uri sett svona:
