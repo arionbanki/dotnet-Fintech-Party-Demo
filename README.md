@@ -3,7 +3,7 @@ Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 Nokkrir punktar:
 ----------------
-ATH: bæði codeclients og implicitclient ( t.d. python og javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
+ATH: bæði codeclients og implicitclient ( t.d. Python og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
 ----------------------------------------------------------------------------------------------
 Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
