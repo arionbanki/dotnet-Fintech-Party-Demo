@@ -18,7 +18,7 @@ Dæmi um harðkóðaðan access token sem notendur geta notað, til að einfalda
 
 
 ------------------------------------------------------------------------------<br>
-ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
+ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javascript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
 ----------------------------------------------------------------------------------------------
 Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
