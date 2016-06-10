@@ -2,18 +2,6 @@
 Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 <br><br>Fyrzt nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta og atriði varðandi Fintech:<br>
-------------------------------------------------------------------------------<br>
-ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
-----------------------------------------------------------------------------------------------
-Authorize endpoint - til að fá authorization-code til baka:<br>
-https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
-
-ath. til að gera implicit flow ( t.d. fyrir Python, Node.js og Javascript! ):
-<br>
-
-responsetype: "token" fyrir implicit client'a og redirect_uri sett svona:
-redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback
-<br>
 
 Dæmi um hvernig implicit client ( t.d. Javascript eða Python ) myndi kalla til að fá tóka:
 ----------------------------------------------------------------------------
@@ -28,6 +16,19 @@ Dæmi um harðkóðaðan access token sem notendur geta notað, til að einfalda
 ------------------------------------------------------------------------<br>
 "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsImtpZCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSJ9.eyJjbGllbnRfaWQiOiJFaWtpVGVzdENsaWVudCIsInNjb3BlIjoiZmluYW5jaWFsIiwic3ViIjoiMjExMjU3MjAyOSIsImFtciI6InBhc3N3b3JkIiwiYXV0aF90aW1lIjoxNDY0OTYxNTYyLCJpZHAiOiJpZHNydiIsImlzcyI6Imh0dHBzOi8vYXJpb25hcGktaWRlbnRpdHlzZXJ2ZXIzLXNhbmRib3guYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwczovL2FyaW9uYXBpLWlkZW50aXR5c2VydmVyMy1zYW5kYm94LmF6dXJld2Vic2l0ZXMubmV0L3Jlc291cmNlcyIsImV4cCI6MTQ2NTMyMTU2NiwibmJmIjoxNDY0OTYxNTY2fQ.gjgfL0_Jah0sGGswSu0-_K2ibLF8QPqzgyn0j4azOS2S7Wxg_bojwwqokfVkgPLlta1DnW4xuK0vWrdJBTmWRf6jFl8iEU5je43ppJ5i5kpJWgxFnC3H9JsYhCwbbsqbGYMMKoyBd3Xo7KNmknXBnJN62IlFjVrg_Fcnqut-79uSvS6X_Jlm509G21N1GnUDMAFLCxh_utUnr6Yp7G1y7gvep4VN5L--aMpSLDbQMOYfaRNcgeSjGNASG5mC1tB0TBGqNeUdeekkUYkQxMuaxjkO2rzPkMq1YPvQGgbp29LCsEe3TaasiidrFMaK2tPJ-7MRP-D5b6BymZPXJbcZrw"       
 
+
+------------------------------------------------------------------------------<br>
+ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javacsript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
+----------------------------------------------------------------------------------------------
+Authorize endpoint - til að fá authorization-code til baka:<br>
+https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
+
+ath. til að gera implicit flow ( t.d. fyrir Python, Node.js og Javascript! ):
+<br>
+
+responsetype: "token" fyrir implicit client'a og redirect_uri sett svona:
+redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback
+<br>
 
 ATH. Implicit client'ar þurfa EKKI að nota þennan endapunkt, en code clients ( t.d. java/C#/java/iOS/Android ) nota hann:<br>
 ------------------------------------------------------------------------------------------------------------------------------
