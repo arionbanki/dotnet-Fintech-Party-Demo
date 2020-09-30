@@ -1,4 +1,4 @@
-# DotNet sýnidæmi fyrir Fintech partý Arion banka hf. í júní 2016 
+# DotNet sýnidæmi fyrir Fintech partý Arion banka hf. í júní 2016 (uppfært í september 2020)
 Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
 
 <br><br>Fyrzt nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta og atriði varðandi Fintech:<br>
