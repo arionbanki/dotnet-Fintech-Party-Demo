@@ -17,6 +17,7 @@ Please note you might need to specify it as a bearer token depending on the clie
 --------------------------------------------------------------------------------------------------------------------<br>
 "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsImtpZCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSJ9.eyJjbGllbnRfaWQiOiJIYWNrMjAyMENsaWVudCIsInNjb3BlIjoiZmluYW5jaWFsIiwic3ViIjoiMDYxMjI0MjAzOSIsImFtciI6InBhc3N3b3JkIiwiYXV0aF90aW1lIjoxNjAxNDk5MzEyLCJpZHAiOiJpZHNydiIsImlzcyI6Imh0dHBzOi8vYXJpb25hcGktaWRlbnRpdHlzZXJ2ZXIzLXNhbmRib3guYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwczovL2FyaW9uYXBpLWlkZW50aXR5c2VydmVyMy1zYW5kYm94LmF6dXJld2Vic2l0ZXMubmV0L3Jlc291cmNlcyIsImV4cCI6MTYwMjU3OTMxNiwibmJmIjoxNjAxNDk5MzE2fQ.EFe0TWEiO9JxMS1Dl5RIuGrtn_qr4hqphFnr193SOiWnF3L3T42BvW1jS2eLcNniEE4U8mIeYXE9J-MfKYPt9DTht73bFbwjR27nnpyRJuOgVBX9mPY5-1L-F2g7CnvddxRLeCMvZN2kkDUh4HNMNywH61ZnC8X4xlkCIj62kXImz9n9dcMI5PZmJzowDwylcIgV0WPSEKfucyVtJ3RtUsbz4fS14J4Bg8bTN5YtfqB4AcOSlFoq2oyn9xEaJ2rm8SWl1905POX8LQlp3nXU824EofdiSGoFdpVxUm5eBN9KVnRUjCgO33BCZJPqn2UdjbymdF_p9RTQ_JX5OsID6w"       
 
+The token above will be valid for the following demo user Dennis Milloway, and to view his data
 
 ------------------------------------------------------------------------------<br>
 ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javascript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
