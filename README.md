@@ -7,7 +7,7 @@ Example of an implicit client ( e.g. Javascript or Python ) requesting an access
 ----------------------------------------------------------------------------
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=XXXXXXXXXX&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&scope=financial
 <br>
-annað dæmi ( athugið að sum OAuth2 helper library url-encoda sjálf fyrir mann, önnur ekki - redirectUri'ið þarf að vera url-encodað - hægt er að nota þetta tól til að encoda url'ið: http://meyerweb.com/eric/tools/dencoder/ )
+Plese note that different OAuth2 helper libraries might handle url-encoding on your behalf but others not. The redirectUri needs ot be url-encoded - and multiple options to help doing that manually like this website: http://meyerweb.com/eric/tools/dencoder/). Below is another example of a request:
 <br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=FintechAzureApiManagement&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&state=aae016ca-1c17-42bc-99d2-122c8470b0d9&scope=financial
 <br>
@@ -20,24 +20,24 @@ Please note you might need to specify it as a bearer token depending on the clie
 The token above will be valid for the following demo user Dennis Milloway, to view his data ( you can get more users by requesting a new user and a token for the new user, in the links at the bottom of this page ) 
 
 ------------------------------------------------------------------------------<br>
-ATH: bæði codeclients og implicitclient ( t.d. Python, Node.js og Javascript ) þurfa þennan endapunkt til að hefja innskráningu:<br>
+NOTE: both code clients and implicit clients (e.g. Python, Node.js & Javascript) need to communicate with this endpoint to start the logon flow:<br>
 ----------------------------------------------------------------------------------------------
 Authorize endpoint - til að fá authorization-code til baka:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize
 
-ath. til að gera implicit flow ( t.d. fyrir Python, Node.js og Javascript! ):
+To do an implicit flow (e.g. Python, Node.js or Javascript):
 <br>
 
-responsetype: "token" fyrir implicit client'a og redirect_uri sett svona:
+responsetype: "token" for an implicit client and redirect_uri set as:
 redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback
 <br>
 
-ATH. Implicit client'ar þurfa EKKI að nota þennan endapunkt, en code clients ( t.d. java/C#/java/iOS/Android ) nota hann:<br>
+NOTE. Implicit clients do NOT need to connect to this endpoint, but it applies code flow clients (e.g. Java/C#/Javascript/iOS/Android ):<br>
 ------------------------------------------------------------------------------------------------------------------------------
-Token endpoint - sendir authorization-code inn sem fékkst að ofan, til að fá access-token til baka:<br>
+Token endpoint - sends the authorization-code retrieved from before, to get an access-token issued:<br>
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/token
 
-notar svo authorization code og OcpApimSubscriptionKey ( sem fæst í Azure portalnum hérna:<br> https://arionapi-sandbox.portal.azure-api.net/ ) til að kalla á varin WebApi
+Then uses the  authorization code and OcpApimSubscriptionKey (which you can get in the Azure portal:<br> https://arionapi-sandbox.portal.azure-api.net/ ) to invoke pretected Api endpoints.
 <br>
 
 <br>--------------------------------------------------------------------------------------------------<br>
