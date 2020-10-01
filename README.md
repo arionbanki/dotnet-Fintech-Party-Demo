@@ -1,9 +1,9 @@
 # DotNet Demo Clients for Arion Bank hf. Hackathon API (updated September 2020)
-Demo client for .NET FW, authenticates and invokes the Sandbox API with some simple invocations. Much of the rest of these instructions are in Icelandic.
+Demo client for .NET FW, authenticates and invokes the Sandbox API with some simple invocations. Much of the rest of these instructions are in Icelandic.  
 
-<br><br>Fyrst nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta og atriði varðandi Fintech:<br>
+To begin with, a few notes on how OAuth2 authentication can work for the various clients:<br>
 
-Dæmi um hvernig implicit client ( t.d. Javascript eða Python ) myndi kalla til að fá tóka:
+Example of an implicit client ( e.g. Javascript or Python ) requesting an access token:
 ----------------------------------------------------------------------------
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=XXXXXXXXXX&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&scope=financial
 <br>
@@ -12,7 +12,8 @@ annað dæmi ( athugið að sum OAuth2 helper library url-encoda sjálf fyrir ma
 https://arionapi-identityserver3-sandbox.azurewebsites.net/connect/authorize?response_type=token&client_id=FintechAzureApiManagement&redirect_uri=https%3a%2f%2farionapi-sandbox.portal.azure-api.net%2fdocs%2fservices%2f57361a83110546175c6fec3d%2fconsole%2foauth2%2fimplicit%2fcallback&state=aae016ca-1c17-42bc-99d2-122c8470b0d9&scope=financial
 <br>
 
-Dæmi um harðkóðaðan access token sem notendur geta notað, til að einfalda málin - tókinn gildir til 13.10.2020 kl 08:55<br>
+A pre-generated access token that users can use for testing - valid until 13.10.2020 at 08:55  
+Please note you might need to specify it as a bearer token depending on the client you use, e.g.  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLC..[Rest of Token].'  
 --------------------------------------------------------------------------------------------------------------------<br>
 "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsImtpZCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSJ9.eyJjbGllbnRfaWQiOiJIYWNrMjAyMENsaWVudCIsInNjb3BlIjoiZmluYW5jaWFsIiwic3ViIjoiMDYxMjI0MjAzOSIsImFtciI6InBhc3N3b3JkIiwiYXV0aF90aW1lIjoxNjAxNDk5MzEyLCJpZHAiOiJpZHNydiIsImlzcyI6Imh0dHBzOi8vYXJpb25hcGktaWRlbnRpdHlzZXJ2ZXIzLXNhbmRib3guYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwczovL2FyaW9uYXBpLWlkZW50aXR5c2VydmVyMy1zYW5kYm94LmF6dXJld2Vic2l0ZXMubmV0L3Jlc291cmNlcyIsImV4cCI6MTYwMjU3OTMxNiwibmJmIjoxNjAxNDk5MzE2fQ.EFe0TWEiO9JxMS1Dl5RIuGrtn_qr4hqphFnr193SOiWnF3L3T42BvW1jS2eLcNniEE4U8mIeYXE9J-MfKYPt9DTht73bFbwjR27nnpyRJuOgVBX9mPY5-1L-F2g7CnvddxRLeCMvZN2kkDUh4HNMNywH61ZnC8X4xlkCIj62kXImz9n9dcMI5PZmJzowDwylcIgV0WPSEKfucyVtJ3RtUsbz4fS14J4Bg8bTN5YtfqB4AcOSlFoq2oyn9xEaJ2rm8SWl1905POX8LQlp3nXU824EofdiSGoFdpVxUm5eBN9KVnRUjCgO33BCZJPqn2UdjbymdF_p9RTQ_JX5OsID6w"       
 
