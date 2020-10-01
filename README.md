@@ -1,7 +1,7 @@
-# DotNet sýnidæmi fyrir Fintech partý Arion banka hf. í júní 2016 (uppfært í september 2020)
-Demo biðlari .NET, auðkennir og kallar á API með einfaldri virkni.
+# DotNet Demo Clients for Arion Bank hf. Hackathon API (updated September 2020)
+Demo client for .NET FW, authenticates and invokes the Sandbox API with some simple invocations. Much of the rest of these instructions are in Icelandic.
 
-<br><br>Fyrzt nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta og atriði varðandi Fintech:<br>
+<br><br>Fyrst nokkrir punktar varðandi OAuth2 auðkenningarmál fyrir hina ýmsu clienta og atriði varðandi Fintech:<br>
 
 Dæmi um hvernig implicit client ( t.d. Javascript eða Python ) myndi kalla til að fá tóka:
 ----------------------------------------------------------------------------
