@@ -1,4 +1,4 @@
-# DotNet Demo Clients for Arion Bank hf. Hackathon API (updated September 2020)
+# DotNet Demo Clients for Arion Bank hf. Hackathon API (updated October 2020)
 Demo client for .NET FW, authenticates and invokes the Sandbox API with some simple invocations. Much of the rest of these instructions are in Icelandic.  
 
 To begin with, a few notes on how OAuth2 authentication can work for the various clients:<br>
